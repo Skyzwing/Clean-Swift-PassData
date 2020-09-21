@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rh8-jg-oiN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="XfU-yX-87g">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="Rh8-jg-oiN" customClass="MainViewController" customModule="Clean_Architecture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rdT-l3-FFu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHd-0N-GQd">
+                                <rect key="frame" x="10" y="431" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7q-bZ-w26">
+                                <rect key="frame" x="152.5" y="367.5" width="109" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0t-Np-Eno">
+                                <rect key="frame" x="10" y="485" width="394" height="30"/>
+                                <color key="backgroundColor" red="0.1333333333" green="0.67450980390000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Go To Home">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goHomeButton:" destination="Rh8-jg-oiN" eventType="touchUpInside" id="080-Kc-7fU"/>
+                                    <segue destination="7qE-Cx-9wk" kind="show" id="V9a-lp-WKi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XO7-Hs-uFE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xHd-0N-GQd" firstAttribute="top" secondItem="X7q-bZ-w26" secondAttribute="bottom" constant="31" id="1DA-47-OJs"/>
+                            <constraint firstItem="u0t-Np-Eno" firstAttribute="top" secondItem="xHd-0N-GQd" secondAttribute="bottom" constant="20" id="JtR-HZ-aDc"/>
+                            <constraint firstItem="u0t-Np-Eno" firstAttribute="leading" secondItem="XO7-Hs-uFE" secondAttribute="leading" constant="10" id="S78-hH-Ob9"/>
+                            <constraint firstItem="X7q-bZ-w26" firstAttribute="centerX" secondItem="xHd-0N-GQd" secondAttribute="centerX" id="Wea-49-eOO"/>
+                            <constraint firstItem="xHd-0N-GQd" firstAttribute="leading" secondItem="XO7-Hs-uFE" secondAttribute="leading" constant="10" id="WvX-RZ-LhN"/>
+                            <constraint firstItem="XO7-Hs-uFE" firstAttribute="trailing" secondItem="u0t-Np-Eno" secondAttribute="trailing" constant="10" id="gSq-ja-1fH"/>
+                            <constraint firstItem="xHd-0N-GQd" firstAttribute="centerY" secondItem="rdT-l3-FFu" secondAttribute="centerY" id="i30-9k-bD7"/>
+                            <constraint firstItem="xHd-0N-GQd" firstAttribute="centerX" secondItem="rdT-l3-FFu" secondAttribute="centerX" id="thp-L2-73p"/>
+                            <constraint firstItem="XO7-Hs-uFE" firstAttribute="trailing" secondItem="xHd-0N-GQd" secondAttribute="trailing" constant="10" id="wuy-cq-Udv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OYb-hI-4Cd"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="xHd-0N-GQd" id="aJk-45-DhT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xvX-2N-FVt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2015.9420289855075" y="-245.08928571428569"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="gBD-HK-qsF">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="7qE-Cx-9wk" customClass="DetailViewController" customModule="Clean_Architecture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LiS-48-mj9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCf-eZ-0BY">
+                                <rect key="frame" x="186" y="410.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FG1-v6-Yeh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZCf-eZ-0BY" firstAttribute="centerY" secondItem="LiS-48-mj9" secondAttribute="centerY" id="GdK-Od-XpW"/>
+                            <constraint firstItem="ZCf-eZ-0BY" firstAttribute="centerX" secondItem="LiS-48-mj9" secondAttribute="centerX" id="Zcz-3o-bju"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="chI-fd-We6"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="ZCf-eZ-0BY" id="JhE-8b-3vi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G9Z-u3-dVR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2776.811594202899" y="-248.4375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
